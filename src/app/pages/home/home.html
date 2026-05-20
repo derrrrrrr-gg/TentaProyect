@@ -1,1 +1,23 @@
-<p>home works!</p>,
+<div class="container">
+
+  <header class="hero">
+    <h1>🎬 CINEMA WORLD</h1>
+    <p>Las mejores películas del momento</p>
+  </header>
+
+  <section class="movies-grid">
+
+    <div class="movie-card" *ngFor="let pelicula of peliculas">
+
+      <img [src]="pelicula.imagen" [alt]="pelicula.titulo">
+
+      <div class="movie-info">
+        <h2>{{ pelicula.titulo }}</h2>
+        <p>{{ pelicula.genero }}</p>
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
