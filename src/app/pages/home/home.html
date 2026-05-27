@@ -3,6 +3,10 @@
   <header class="hero">
     <h1>🎬 CINEMA WORLD</h1>
     <p>Las mejores películas del momento</p>
+
+    <button class="btn-agregar" (click)="abrirModal()">
+      + Agregar Película
+    </button>
   </header>
 
   <section class="movies-grid">
@@ -21,4 +25,44 @@
   </section>
 
 </div>
-<h1> cambios desde remoto🎶</h1>
+
+<!-- MODAL -->
+
+<div class="modal-overlay" *ngIf="modalAbierto">
+
+  <div class="modal">
+
+    <h2>Agregar Película</h2>
+
+    <input
+      type="text"
+      placeholder="Título"
+      [(ngModel)]="nuevaPelicula.titulo"
+    >
+
+    <input
+      type="text"
+      placeholder="Género"
+      [(ngModel)]="nuevaPelicula.genero"
+    >
+
+    <input
+      type="text"
+      placeholder="URL de imagen"
+      [(ngModel)]="nuevaPelicula.imagen"
+    >
+
+    <div class="modal-buttons">
+      <button class="guardar" (click)="agregarPelicula()">
+        Guardar
+      </button>
+
+      <button class="cancelar" (click)="cerrarModal()">
+        Cancelar
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
