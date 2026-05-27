@@ -2,7 +2,7 @@
 
   <header class="hero">
     <h1>🎬 CINEMA WORLD</h1>
-    <p>Las mejores películas del momento</p>
+    <p>Explora las mejores películas del momento</p>
 
     <button class="btn-agregar" (click)="abrirModal()">
       + Agregar Película
@@ -25,7 +25,10 @@
 
       <div class="movie-info">
         <h2>{{ pelicula.titulo }}</h2>
-        <p>{{ pelicula.genero }}</p>
+
+        <span class="tag">
+          {{ pelicula.genero }}
+        </span>
       </div>
 
     </div>

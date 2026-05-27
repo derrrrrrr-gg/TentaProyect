@@ -71,5 +71,5 @@ export class Home {
   eliminarPelicula(index: number) {
     this.peliculas.splice(index, 1);
   }
-
 }
+
