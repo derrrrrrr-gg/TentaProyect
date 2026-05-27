@@ -11,9 +11,17 @@
 
   <section class="movies-grid">
 
-    <div class="movie-card" *ngFor="let pelicula of peliculas">
+    <div class="movie-card" *ngFor="let pelicula of peliculas; let i = index">
 
-      <img [src]="pelicula.imagen" [alt]="pelicula.titulo">
+      <div class="movie-image">
+
+        <img [src]="pelicula.imagen" [alt]="pelicula.titulo">
+
+        <button class="btn-eliminar" (click)="eliminarPelicula(i)">
+          ✖
+        </button>
+
+      </div>
 
       <div class="movie-info">
         <h2>{{ pelicula.titulo }}</h2>
@@ -53,6 +61,7 @@
     >
 
     <div class="modal-buttons">
+
       <button class="guardar" (click)="agregarPelicula()">
         Guardar
       </button>
@@ -60,9 +69,9 @@
       <button class="cancelar" (click)="cerrarModal()">
         Cancelar
       </button>
+
     </div>
 
   </div>
 
 </div>
-

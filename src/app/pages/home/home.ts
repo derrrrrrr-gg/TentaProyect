@@ -54,7 +54,7 @@ export class Home {
       this.nuevaPelicula.imagen.trim()
     ) {
 
-      this.peliculas.push({
+      this.peliculas.unshift({
         ...this.nuevaPelicula
       });
 
@@ -66,6 +66,10 @@ export class Home {
 
       this.cerrarModal();
     }
+  }
+
+  eliminarPelicula(index: number) {
+    this.peliculas.splice(index, 1);
   }
 
 }
